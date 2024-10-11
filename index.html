@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UR Scents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+        body {
+            font-family: 'Raleway', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Header Section -->
+    <header class="bg-gray-900 fixed w-full z-20 top-0 border-b border-gray-700">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6 flex-wrap">
+            <div class="text-2xl font-bold">UR Scents</div>
+            <nav id="menu" class="space-x-6 mt-4 md:mt-0 flex-grow md:flex md:justify-center hidden ">
+                <a href="#" class="hover:text-gray-300 text-red-500">Home</a>
+                <a href="#" class="hover:text-gray-300">About</a>
+                <a href="#" class="hover:text-gray-300">Shop</a>
+                <a href="#" class="hover:text-gray-300">Collections</a>
+            </nav>
+            <div class="flex items-center mt-4 md:mt-0">
+                <button class="text-sm hover:text-gray-300 mr-2">Login</button>
+                <button class="text-sm bg-gray-700 hover:bg-gray-600 py-1 px-3 rounded">Sign Up</button>
+                <button id="menu-toggle" class="text-white block md:hidden ml-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dropdown Menu for Mobile -->
+    <div id="dropdown-menu" class="hidden bg-gray-900 md:hidden "> <!-- Increased margin-top to mt-6 -->
+        <nav class="flex flex-col space-y-2 py-2">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-800 text-red-500">Home</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-800">About</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-800">Shop</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-800">Collections</a>
+        </nav>
+    </div>
+
+ <!-- Hero Section -->
+<section class="relative mt-16">
+    <img src="public/images/photo 1.png" alt="Hero Image" class="w-full h-96 object-cover">
+    <div class="absolute inset-0 flex items-center justify-center">
+        <div class="text-center text-white">
+            <h1 class="text-3xl md:text-4xl font-bold">Welcome to UR Scents</h1>
+            <p class="text-3xl md:text-4xl mt-4">Discover Your Own Signature Scent</p> <!-- Updated font size here -->
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Top 3 Best Seller Section -->
+    <section class="py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-10">Top 3 Parfum Best Seller</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
+
+                <!-- Parfum 1 -->
+                <div class="bg-white text-black p-6 rounded-lg">
+                    <img src="public/images/photo 2.png" alt="Parfum 1" class="mx-auto mb-4" />
+                    <h3 class="text-lg font-bold">Jean Paul Gaultier "Le Male" Le Parfum</h3>
+                </div>
+
+                <!-- Parfum 2 -->
+                <div class="bg-white text-black p-6 rounded-lg">
+                    <img src="public/images/photo 3.png" alt="Parfum 2" class="mx-auto mb-4" />
+                    <h3 class="text-lg font-bold">Scandal Jean Paul Gaultier</h3>
+                </div>
+
+                <!-- Parfum 3 -->
+                <div class="bg-white text-black p-6 rounded-lg">
+                    <img src="public/images/photo 4.png" alt="Parfum 3" class="mx-auto mb-4" />
+                    <h3 class="text-lg font-bold">Jean Paul Gaultier "Le Male" Elixir</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 py-8">
+        <div class="container mx-auto text-center space-y-4">
+            <p>garinmuhammadakbar@gmail.com | +6281258067402 | @URScent.ori</p>
+            <p>Jl. Abdul Gani GG.III</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const dropdownMenu = document.getElementById('dropdown-menu');
+
+            menuToggle.addEventListener('click', function () {
+                // Toggle dropdown menu visibility
+                dropdownMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
